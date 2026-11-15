@@ -1,0 +1,29 @@
+# Shared build steps for every Aegis OS variant.
+# Each recipe pulls this in with "from-file: common.yml".
+modules:
+  # Host packages. Keep this list short: security tools belong in the
+  # Kali container, not on the host that anti-cheat inspects.
+  - type: dnf
+    install:
+      skip-unavailable: true
+      packages:
+        - nmap
+        - tmux
+
+  # Adds the "ujust setup-kali" and "ujust kali" commands.
+  - type: justfiles
+    include:
+      - aegis.just
+
+  # Apps installed for every user on first boot.
+  - type: default-flatpaks
+    configurations:
+      - notify: true
+        scope: system
+        repo:
+          title: Flathub (system)
+        install:
+          - com.github.tchx84.Flatseal
+
+  # Sets up image signature verification on the installed system.
+  - type: signing

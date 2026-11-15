@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# NVIDIA variant: RTX 20-series and newer (NVIDIA's open kernel driver).
+# Published to ghcr.io/<your-github-user>/aegis-os-nvidia
+name: aegis-os-nvidia
+description: Bazzite-based gaming and security distro (NVIDIA RTX graphics, KDE Plasma).
+
+base-image: ghcr.io/ublue-os/bazzite-nvidia-open
+image-version: stable
+
+modules:
+  - from-file: common.yml
