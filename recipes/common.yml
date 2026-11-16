@@ -1,4 +1,4 @@
-# Shared build steps for every Aegis OS variant.
+# Shared build steps for every Bastion OS variant.
 # Each recipe pulls this in with "from-file: common.yml".
 modules:
   # Host packages. Keep this list short: security tools belong in the
@@ -13,7 +13,7 @@ modules:
   # Adds the "ujust setup-kali" and "ujust kali" commands.
   - type: justfiles
     include:
-      - aegis.just
+      - bastion.just
 
   # Apps installed for every user on first boot.
   - type: default-flatpaks
