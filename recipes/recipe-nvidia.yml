@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # NVIDIA variant: RTX 20-series and newer (NVIDIA's open kernel driver).
 # Published to ghcr.io/<your-github-user>/bastion-os-nvidia
-name: bastion-os-nvidia
+name: bastion-nvidia
 description: Bazzite-based gaming and security distro (NVIDIA RTX graphics, KDE Plasma).
 
 base-image: ghcr.io/ublue-os/bazzite-nvidia-open
