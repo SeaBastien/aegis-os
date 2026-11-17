@@ -10,7 +10,7 @@ modules:
         - nmap
         - tmux
         # Bastion HUD, built by the bastion-hud repository.
-        - https://github.com/USER/bastion-hud/releases/download/latest/bastion-hud.x86_64.rpm
+        - https://github.com/seabastien/bastion-hud/releases/download/latest/bastion-hud.x86_64.rpm
 
   # Adds the "ujust setup-kali" and "ujust kali" commands.
   - type: justfiles
