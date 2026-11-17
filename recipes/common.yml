@@ -36,3 +36,14 @@ modules:
       NAME: Bastion
       PRETTY_NAME: Bastion (based on Bazzite)
       DEFAULT_HOSTNAME: bastion
+
+  # Branding: copy the Bastion banner into the image.
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  # Branding: point image-info.json at the Bastion image.
+  - type: script
+    scripts:
+      - bastion-image-info.sh
