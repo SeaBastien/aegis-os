@@ -9,7 +9,7 @@ INFO=/usr/share/ublue-os/image-info.json
 # The NVIDIA base image's name contains "nvidia"; use that to pick our variant.
 base_name=$(jq -r '."image-name"' "$INFO")
 if [[ "$base_name" == *nvidia* ]]; then
-    name="bastion-os-nvidia"
+    name="bastion-nvidia"
 else
     name="bastion-os"
 fi
