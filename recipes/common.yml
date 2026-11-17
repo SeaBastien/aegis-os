@@ -29,3 +29,10 @@ modules:
 
   # Sets up image signature verification on the installed system.
   - type: signing
+
+   # Branding: the name shown by the system, the HUD and fastfetch.
+  - type: os-release
+    properties:
+      NAME: Bastion
+      PRETTY_NAME: Bastion (based on Bazzite)
+      DEFAULT_HOSTNAME: bastion
